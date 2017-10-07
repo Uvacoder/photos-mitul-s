@@ -1,0 +1,156 @@
+$dark: #141414;
+$green: #16A085;
+$second-green: #1abc9c;
+
+body, html {
+  margin: 0;
+  padding: 0px;
+  font-family: "Montserrat",sans-serif;
+  background-color: $dark;
+  color: white;
+  line-height: 1.42857143;
+}
+
+// CENTRAL THROUGH SITE
+
+h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: 'Nunito',sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+hr {
+  width: 50px;
+  height: 2px;
+  background-color: $second-green;
+  border: 0px solid $second-green;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.space {
+  height: 40px;
+}
+
+// BUTTONS
+.btn {
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.5s;
+  padding: 10px;
+}
+.go-to-btn {
+  border: 1px solid $green;
+  padding: 7px 30px;
+  word-spacing: 2px;
+  border-radius: 2px;
+  font-size: 12px;
+  &:hover {
+    color: #fff;
+    background-color: $green;
+  }
+}
+
+.down-btn {
+  font-size: 26px;
+  border: 1px solid $green;
+  padding: 5px;
+  position: relative;
+  margin-top: 20px;
+  color: $second-green;
+}
+
+// INDEX PAGE //
+// SECTION - HOME
+
+#home {
+  @extend #holder;
+  background: url(../img/header-2.jpg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  h1 {
+    font-size: 46px;
+  }
+}
+
+#cta {
+  background-color: #fff;
+  color: $dark;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#photos {
+  .photo-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-gap:10px;
+    margin-left: -20px;
+  }
+  .photo-item {
+    width: 100%;
+  }
+}
+
+#contact {
+  @extend #holder;
+  background-image: url(../img/header-2.jpg);
+  .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+#footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 5px solid $green;
+  .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  p:last-child {
+    text-align: right;
+  }
+}
+
+
+// OTHER
+#holder {
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
