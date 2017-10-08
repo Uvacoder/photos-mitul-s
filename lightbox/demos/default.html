@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+
+	<meta charset="utf-8">
+	<title>basicLightbox Demo</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="../dist/basicLightbox.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+
+		html {
+			width: 100%;
+			height: 100%;
+		}
+
+		body {
+			text-align: center;
+			min-height: 100%;
+			font-size: 14px;
+			color: white;
+		}
+
+		a.button {
+			display: inline-block;
+			margin: 50px 0;
+			padding: 6px 10px;
+			background: #2875ed;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 3px;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		div.classNames {
+			background: #2875ed;
+		}
+
+	</style>
+
+	<img width="1400" height="900" src="https://placehold.it/1400x900" data-basicLightbox data-id="0">
+	<a href="#" class="button" data-show-id="0">img</a>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Scxs7L0vhZ4" frameborder="0" allowfullscreen data-basicLightbox data-id="1"></iframe>
+	<a href="#" class="button" data-show-id="1">iframe</a>
+
+	<div data-basicLightbox data-id="2">
+		<h1>DIV</h1>
+		<p>I'm a div inside a lightbox.</p>
+	</div>
+	<a href="#" class="button" data-show-id="2">div</a>
+
+	<div data-basicLightbox data-id="3">
+		<h1>Callbacks</h1>
+		<p>Take a look at the console of your browser.<br>This lightbox will close automaticly to demonstrate the close-callback.</p>
+	</div>
+	<a href="#" class="button callbacks" data-show-id="3">callbacks</a>
+
+	<div data-basicLightbox data-id="4">
+		<h1>Blocked</h1>
+		<p>It's not possible to close this lightbox,<br>because the beforeClose function returns false.</p>
+	</div>
+	<a href="#" class="button blocked" data-show-id="4">blocked</a>
+
+	<div data-basicLightbox data-id="5">
+		<h1>Invalid</h1>
+		<p>No callback should fire, because non of them is a function.<br>No HTML should be appended, because non of them is a function or string.</p>
+	</div>
+	<a href="#" class="button invalid" data-show-id="5">invalid</a>
+
+	<div data-basicLightbox data-id="6">
+		<h1>Closable</h1>
+		<p>It's possible to close this lightbox with a click (default).</p>
+	</div>
+	<a href="#" class="button closable" data-show-id="6">closable</a>
+
+	<div data-basicLightbox data-id="7">
+		<h1>Not closable</h1>
+		<p>It's not possible to close this lightbox with a click.</p>
+	</div>
+	<a href="#" class="button notclosable" data-show-id="7">not closable</a>
+
+	<div data-basicLightbox data-id="8">
+		<h1>Custom HTML</h1>
+		<p>You can add custom HTML before and after the HTML placeholder element.</p>
+	</div>
+	<a href="#" class="button custom" data-show-id="8">custom</a>
+
+	<div data-basicLightbox data-id="9">
+		<h1>Custom classNames</h1>
+		<p>You can add custom classNames to the lightbox element.</p>
+	</div>
+	<a href="#" class="button classNames" data-show-id="9">classNames</a>
+
+	<a href="#" class="button dynamic">dynamic</a>
+
+	<a href="#" class="button stack">stack</a>
+
+	<script src="../dist/basicLightbox.min.js"></script>
+
+	<script>
+
+		const getTargetHTML = function(elem) {
+
+			const id     = elem.getAttribute('data-show-id')
+			const target = document.querySelector(`[data-id="${ id }"]`)
+
+			return target.outerHTML
+
+		}
+
+		document.querySelectorAll('[data-show-id]').forEach(function(elem) {
+
+			const html = getTargetHTML(elem)
+
+			elem.onclick = basicLightbox.create(html).show
+
+		})
+
+		document.querySelector('.button.callbacks').onclick = function(e) {
+
+			const html = getTargetHTML(this)
+
+			const instance = basicLightbox.create(html, {
+				beforeShow  : (instance) => console.log('beforeShow', instance),
+				afterShow   : (instance) => console.log('afterShow', instance),
+				beforeClose : (instance) => console.log('beforeClose', instance),
+				afterClose  : (instance) => console.log('afterClose', instance)
+			})
+
+			instance.show((instance) => console.log('finished show()', instance))
+
+			setTimeout(() => {
+
+				instance.close((instance) => console.log('finished close()', instance))
+
+			}, 3000)
+
+		}
+
+		document.querySelector('.button.blocked').onclick = function(e) {
+
+			const html = getTargetHTML(this)
+
+			basicLightbox.create(html, {
+				beforeClose: () => false
+			}).show()
+
+		}
+
+		document.querySelector('.button.invalid').onclick = function(e) {
+
+			const html = getTargetHTML(this)
+
+			basicLightbox.create(html, {
+				closable          : null,
+				className         : null,
+				beforeShow        : null,
+				afterShow         : null,
+				beforeClose       : null,
+				afterClose        : null,
+				beforePlaceholder : null,
+				afterPlaceholder  : null
+			}).show()
+
+		}
+
+		document.querySelector('.button.closable').onclick = function(e) {
+
+			const html = getTargetHTML(this)
+
+			basicLightbox.create(html, {
+				closable: true
+			}).show()
+
+		}
+
+		document.querySelector('.button.notclosable').onclick = function(e) {
+
+			const html = getTargetHTML(this)
+
+			basicLightbox.create(html, {
+				closable: false
+			}).show()
+
+		}
+
+		document.querySelector('.button.custom').onclick = function(e) {
+
+			const html = getTargetHTML(this)
+
+			basicLightbox.create(html, {
+				beforePlaceholder : () => 'beforePlaceholder',
+				afterPlaceholder  : 'afterPlaceholder'
+			}).show()
+
+		}
+
+		document.querySelector('.button.classNames').onclick = function(e) {
+
+			const html = getTargetHTML(this)
+
+			basicLightbox.create(html, {
+				className: 'classNames'
+			}).show()
+
+		}
+
+		document.querySelector('.button.dynamic').onclick = function(e) {
+
+			const html = `
+				<h1>Dynamic Content</h1>
+				<p>You can set the content of the lightbox with JS.</p>
+			`
+
+			basicLightbox.create(html).show()
+
+		}
+
+		const openStack = function(e) {
+
+			const html     = '<a class="button" href="#">Open another lightbox on top</a>'
+			const instance = basicLightbox.create(html)
+
+			instance.element().querySelector('.button').onclick = openStack
+			instance.show()
+
+		}
+
+		document.querySelector('.button.stack').onclick = openStack
+
+	</script>
+
+</html>

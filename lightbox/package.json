@@ -1,0 +1,39 @@
+{
+  "name": "basiclightbox",
+  "moduleName": "basicLightbox",
+  "version": "3.0.4",
+  "authors": [
+    "Tobias Reich <tobias@electerious.com>"
+  ],
+  "description": "The lightest lightbox ever made",
+  "main": "dist/basicLightbox.min.js",
+  "keywords": [
+    "lightbox",
+    "popup",
+    "modal",
+    "window",
+    "dialog",
+    "gallery",
+    "photo",
+    "responsive",
+    "mobile"
+  ],
+  "scripts": {
+    "start": "gulp watch",
+    "compile": "gulp"
+  },
+  "license": "MIT",
+  "homepage": "https://basiclightbox.electerious.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/electerious/basicLightbox.git"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "devDependencies": {
+    "@electerious/basictasks": "3.0.0",
+    "gulp": "^3.9.1"
+  }
+}
