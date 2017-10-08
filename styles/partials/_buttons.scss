@@ -1,0 +1,57 @@
+.btn {
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  transition: $transition;
+  padding: 10px;
+}
+
+.go-to-btn {
+  border: 1px solid $green;
+  padding: 7px 30px;
+  word-spacing: 2px;
+  border-radius: $radius;
+  font-size: 12px;
+  &:hover {
+    color: $white;
+    background-color: $green;
+  }
+}
+
+.home {
+  top: 150px;
+  .down-btn {
+    z-index: 1;
+    border: 2px solid $white;
+    &:hover {
+      border: 2px solid $second-green;
+    }
+  }
+}
+
+.down-btn {
+  font-size: 26px;
+  border: 1px solid $second-green;
+  border-radius: 50px;
+  padding: 2px 10px;
+  position: relative;
+  color: $second-green;
+  transition: $transition;
+  &:hover {
+    color: $white;
+    background-color: $second-green;
+  }
+}
+
+.send-btn {
+  color: $white;
+  background-color: $green;
+  padding: 15px 35px;
+  float: right;
+  transition: $transition;
+  border: 2px solid transparent;
+  &:hover {
+    background-color: transparent;
+    border: 2px solid $green;
+  }
+}

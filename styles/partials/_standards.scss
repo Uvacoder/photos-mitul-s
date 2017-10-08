@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: "Montserrat",sans-serif;
+  background-color: $dark;
+  color: $white;
+  line-height: 1.42857143;
+}
+
+// CENTRAL THROUGH SITE
+h1, h2, h3 {
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4, h5 {
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Nunito',sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.title {
+  font-size: 46px;
+  font-weight: 700;
+}
+
+input, textarea {
+  border: 0 solid transparent;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+hr {
+  width: 50px;
+  height: 2px;
+  background-color: $second-green;
+  border: 0 solid $second-green;
+}
+
+a {
+  font-weight: 300;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blue {
+  color: $green;
+  transition: $transition;
+  &:hover{
+    color: $second-green;
+  }
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.fluid {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.space {
+  height: 40px;
+}
+
+.hover-color {
+  transition: $transition;
+  &:hover {
+    color: $second-green;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
