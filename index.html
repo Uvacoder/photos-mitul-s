@@ -5,34 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Typical Mitul</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=|Nunito:300|Montserrat:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/a626fd4fda.css">
+    <link rel="stylesheet" href="lightbox/dist/basicLightbox.min.css">
   </head>
   <body>
+
     <section id="home">
       <div class="container text-center">
-        <h1>Hi, I'm Mitul.</h1>
+        <h1 class="title">Hi, I'm Mitul.</h1>
         <h4>LET'S EXPLORE</h4>
         <hr />
+        <div class="home">
+          <a href="#" class="home down-btn">
+            <span class="fa fa-angle-down"></span>
+          </a>
+        </div>
       </div>
     </section>
 
     <section id="navbar">
       <div class="container">
-        <a href="#" class="btn">HOME</a>
-        <a href="#" class="btn">ABOUT</a>
-        <a href="#" class="btn">SERVICES</a>
-        <a href="#" class="btn">CONTACT</a>
-        <a href="#" class="nav-icons">
-          <span class="fa fa-instagram"></span>
-        </a>
-        <a href="#" class="nav-icons">
-          <span class="fa fa-instagram"></span>
-        </a>
-        <a href="#" class="nav-icons">
-          <span class="fa fa-envelope"></span>
-        </a>
+        <div class="navigation">
+          <a href="index.html" class="btn nav-btn">HOME</a>
+          <a href="about.html" class="btn nav-btn">ABOUT</a>
+          <a href="services.html" class="btn nav-btn">SERVICES</a>
+          <a href="#contact" class="btn nav-btn">CONTACT</a>
+          <a href="https://instagram.com/typicalmitul" target="_blank" class="nav-icons hover-color">
+            <span class="fa fa-instagram"></span>
+          </a>
+          <a href="https://twitter.com/typicalmitul" target="_blank" class="nav-icons hover-color">
+            <span class="fa fa-twitter"></span>
+          </a>
+          <a href="mailto:mitulxshah@gmail.com" target="_blank" class="nav-icons hover-color">
+            <span class="fa fa-envelope"></span>
+          </a>
+        </div>
       </div>
+    </section>
+
+    <section id="caro">
+
     </section>
 
     <section id="cta">
@@ -40,13 +54,13 @@
         <h3>SERVICES</h3>
         <hr>
         <p>
-          Interested in working with me? Check out my services! Whatever your needs are, I'm determined to meet them. Click the button below to learn more 👋.
+          Interested in working with me? Check out my services! <br /> Whatever your needs are, I'm determined to meet them. Click the button below to learn more 👋.
         </p>
+        <!-- <div class="space"></div> -->
+        <a href="services.html" class="btn go-to-btn">VISIT SERVICES</a>
         <div class="space"></div>
-        <a href="#" class="btn go-to-btn">VISIT SERVICES</a>
-        <br />
-        <a href="#" class="down-btn">
-          <span class="fa fa-angle-down">Test</span>
+        <a href="#photos" class="down-btn">
+          <span class="fa fa-angle-down"></span>
         </a>
       </div>
     </section>
@@ -54,37 +68,67 @@
     <section id="photos">
       <div class="photo-container">
         <div class="grid">
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
-          <img src="../img/header-2.jpg" class="photo-item"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
+          <img src="../img/header.jpg" class="photo-item" data-src="../img/header.jpg"/>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <div class="container">
-        <h4 class="text-center">CONTACT</h4>
+        <h3 class="text-center">CONTACT</h3>
         <hr />
+        <div class="space"></div>
         <div class="grid">
           <div>
-            <h1>LIKE WHAT YOU SEE?</h1>
+            <h1 class="title">LIKE WHAT YOU SEE?</h1>
             <h5>LET'S WORK!</h5>
-            <ul>
-              <li>Twitter</li>
-              <li>Twitter</li>
+            <ul class="socials">
+              <li>
+                <a href="https://instagram.com/typicalmitul" target="_blank">
+                  <span class="fa fa-instagram fa-2x"></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/typicalmitul" target="_blank">
+                  <span class="fa fa-twitter fa-2x"></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://500px.com/typicalmitul" target="_blank">
+                  <span class="fa fa-500px fa-2x"></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://typicalmitul.tumblr.com" target="_blank">
+                  <span class="fa fa-tumblr fa-2x"></span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:mitulxshah@gmail.com">
+                  <span class="fa fa-envelope fa-2x"></span>
+                </a>
+              </li>
             </ul>
           </div>
           <div>
-              <h1>Form</h1>
+              <form class="form" name="contact" method="post">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                <textarea class="form-control message" id="message" rows="4" name="message" placeholder="Message"></textarea>
+                <input id="submit" name="submit" type="submit" value="Send" class="btn send-btn">
+              </form>
           </div>
         </div>
       </div>
@@ -94,13 +138,16 @@
       <div class="container">
         <div class="grid">
           <p>
-            2017 © By <a href="#">Mitul Shah</a>
+            <span id="date"></span> © By <a href="https://twitter.com/typicalmitul" target="_blank" class="hover-color">Mitul Shah</a>
           </p>
-          <p>
-            Back to Top <span class="fa fa-angle-up"></span>
+          <p class="hover-color">
+            <a href="#">Back to Top <span class="fa fa-angle-up"></span></a>
           </p>
         </div>
       </div>
     </section>
+
+    <script src="script.js"></script>
+    <script src="lightbox/dist/basicLightbox.min.js"></script>
   </body>
 </html>
