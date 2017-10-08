@@ -1,6 +1,8 @@
 body, html {
   margin: 0;
-  padding: 0px;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   font-family: "Montserrat",sans-serif;
   background-color: #141414;
   color: white;
@@ -8,34 +10,51 @@ body, html {
 }
 
 h1, h2, h3 {
+  font-weight: 400;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
+h4, h5 {
+  font-weight: 300;
+}
+
 p {
   font-family: 'Nunito',sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
+}
+
+.title {
+  font-size: 46px;
+  font-weight: 700;
+}
+
+input, textarea {
+  border: 0 solid transparent;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 hr {
   width: 50px;
   height: 2px;
   background-color: #1abc9c;
-  border: 0px solid #1abc9c;
+  border: 0 solid #1abc9c;
 }
 
 a {
+  font-weight: 300;
   text-decoration: none;
   color: inherit;
 }
 
 .container {
-  width: 45%;
+  width: 60%;
   margin: 0 auto;
 }
 
-.text-center {
+.text-center, #navbar {
   text-align: center;
 }
 
@@ -43,11 +62,19 @@ a {
   height: 40px;
 }
 
+.hover-color, .socials li {
+  transition: 0.5s all;
+}
+
+.hover-color:hover, .socials li:hover {
+  color: #1abc9c;
+}
+
 .btn {
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
-  transition: all 0.5s;
+  transition: 0.5s all;
   padding: 10px;
 }
 
@@ -57,6 +84,7 @@ a {
   word-spacing: 2px;
   border-radius: 2px;
   font-size: 12px;
+  margin-top: 20px;
 }
 
 .go-to-btn:hover {
@@ -64,24 +92,87 @@ a {
   background-color: #16A085;
 }
 
+.home {
+  top: 200px;
+}
+
+.home .down-btn {
+  border: 2px solid #fff;
+}
+
+.home .down-btn:hover {
+  border: 2px solid #1abc9c;
+}
+
 .down-btn {
   font-size: 26px;
-  border: 1px solid #16A085;
-  padding: 5px;
+  border: 1px solid #1abc9c;
+  border-radius: 50px;
+  padding: 2px 10px;
   position: relative;
-  margin-top: 20px;
   color: #1abc9c;
+  transition: 0.5s all;
+}
+
+.down-btn:hover {
+  color: #fff;
+  background-color: #1abc9c;
+}
+
+.send-btn {
+  color: #fff;
+  background-color: #16A085;
+  padding: 15px 35px;
+  float: right;
+  transition: 0.5s all;
+  border: 2px solid transparent;
+}
+
+.send-btn:hover {
+  background-color: transparent;
+  border: 2px solid #16A085;
+}
+
+#navbar {
+  z-index: 1;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #141414;
+}
+
+.fixed-nav #navbar {
+  position: fixed;
+}
+
+.navigation {
+  padding-top: 15px;
+}
+
+.nav-btn {
+  font-size: 11px;
+  font-weight: lighter;
+  padding: 15px 35px;
+  border-radius: 2px;
+}
+
+.nav-btn:hover {
+  background-color: #16A085;
+}
+
+.nav-icons {
+  margin: 6px;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #fff;
 }
 
 #home {
-  background: url(../img/header-2.jpg);
-  height: 100vh;
+  background: url(../img/header.jpg);
+  height: 92vh;
   display: flex;
   align-items: center;
-}
-
-#home h1 {
-  font-size: 46px;
 }
 
 #cta {
@@ -89,6 +180,11 @@ a {
   color: #141414;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+#cta p {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #photos .photo-container {
@@ -109,13 +205,56 @@ a {
   width: 100%;
 }
 
+#photos .photo-item:hover {
+  opacity: 0.8;
+  transition: opacity .3s ease-out;
+  -moz-transition: opacity .2s ease-out;
+  -webkit-transition: opacity .2s ease-out;
+  -o-transition: opacity .2s ease-out;
+}
+
 #contact {
-  background-image: url(../img/header-2.jpg);
+  background-image: url(../img/footer.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #contact .grid {
   display: grid;
   grid-template-columns: 50% 50%;
+}
+
+.socials {
+  list-style: none;
+  padding-left: 0;
+}
+
+.socials li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.form .form-control {
+  margin-top: 10px;
+  margin-left: -20px;
+  width: 100%;
+  border-radius: 2px;
+  border-top: 2px solid transparent;
+  transition: 0.5s all;
+  height: 20px;
+}
+
+.form .form-control:focus {
+  outline: none;
+  border-top: 2px solid #16A085;
+}
+
+.form .form-control:first-child {
+  margin-top: 32px;
+}
+
+.form #message {
+  height: 100px;
 }
 
 #footer {
@@ -133,11 +272,7 @@ a {
   text-align: right;
 }
 
-#holder, #home, #contact {
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+.holder, #home, #contact {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

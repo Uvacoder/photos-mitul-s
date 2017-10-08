@@ -1,10 +1,14 @@
 $dark: #141414;
 $green: #16A085;
 $second-green: #1abc9c;
+$radius: 2px;
+$transition: 0.5s all;
 
 body, html {
   margin: 0;
-  padding: 0px;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   font-family: "Montserrat",sans-serif;
   background-color: $dark;
   color: white;
@@ -12,32 +16,48 @@ body, html {
 }
 
 // CENTRAL THROUGH SITE
-
 h1, h2, h3 {
+  font-weight: 400;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
+h4, h5 {
+  font-weight: 300;
+}
+
 p {
   font-family: 'Nunito',sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
+}
+
+.title {
+  font-size: 46px;
+  font-weight: 700;
+}
+
+input, textarea {
+  border: 0 solid transparent;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 hr {
   width: 50px;
   height: 2px;
   background-color: $second-green;
-  border: 0px solid $second-green;
+  border: 0 solid $second-green;
 }
 
 a {
+  font-weight: 300;
   text-decoration: none;
   color: inherit;
 }
 
 .container {
-  width: 45%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -49,55 +69,135 @@ a {
   height: 40px;
 }
 
+.hover-color {
+  transition: $transition;
+  &:hover {
+    color: $second-green;
+  }
+}
+
 // BUTTONS
 .btn {
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
-  transition: all 0.5s;
+  transition: $transition;
   padding: 10px;
 }
+
 .go-to-btn {
   border: 1px solid $green;
   padding: 7px 30px;
   word-spacing: 2px;
-  border-radius: 2px;
+  border-radius: $radius;
   font-size: 12px;
+  margin-top:20px;
   &:hover {
     color: #fff;
     background-color: $green;
   }
 }
 
+.home {
+  top: 200px;
+  .down-btn {
+    border: 2px solid #fff;
+    &:hover {
+      border: 2px solid $second-green;
+    }
+  }
+}
+
+
 .down-btn {
   font-size: 26px;
-  border: 1px solid $green;
-  padding: 5px;
+  border: 1px solid $second-green;
+  border-radius: 50px;
+  padding: 2px 10px;
   position: relative;
-  margin-top: 20px;
   color: $second-green;
+  transition: $transition;
+  &:hover {
+    color: #fff;
+    background-color: $second-green;
+  }
 }
+
+.send-btn {
+  color: #fff;
+  background-color: $green;
+  padding: 15px 35px;
+  float: right;
+  transition: $transition;
+  border: 2px solid transparent;
+  &:hover {
+    background-color: transparent;
+    border: 2px solid $green;
+  }
+}
+
+// NAVIGATION
+#navbar {
+  @extend .text-center;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: $dark;
+}
+
+.fixed-nav #navbar {
+  position: fixed;
+}
+
+.navigation {
+  padding-top: 15px;
+}
+
+.nav-btn {
+  font-size: 11px;
+  font-weight: lighter;
+  padding: 15px 35px;
+  border-radius: $radius;
+  &:hover {
+    background-color: $green;
+  }
+}
+
+.nav-icons {
+  margin: 6px;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
 
 // INDEX PAGE //
 // SECTION - HOME
 
 #home {
-  @extend #holder;
-  background: url(../img/header-2.jpg);
-  height: 100vh;
+  @extend .holder;
+  background: url(../img/header.jpg);
+  height: 92vh;
   display: flex;
   align-items: center;
-  h1 {
-    font-size: 46px;
-  }
 }
+
+// SECTION - Call to Action
 
 #cta {
   background-color: #fff;
   color: $dark;
   padding-top: 60px;
   padding-bottom: 60px;
+  p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
+
+// SECTION - Photo Grid
 
 #photos {
   .photo-container {
@@ -114,17 +214,62 @@ a {
   }
   .photo-item {
     width: 100%;
+    &:hover {
+      opacity: 0.8;
+      transition: opacity .3s ease-out;
+      -moz-transition: opacity .2s ease-out;
+      -webkit-transition: opacity .2s ease-out;
+      -o-transition: opacity .2s ease-out;
+    }
   }
 }
 
+// SECTION - Contact Form
+
 #contact {
-  @extend #holder;
-  background-image: url(../img/header-2.jpg);
+  @extend .holder;
+  background-image: url(../img/footer.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
   .grid {
     display: grid;
     grid-template-columns: 50% 50%;
   }
 }
+
+.socials {
+  list-style: none;
+  padding-left: 0;
+  li {
+    @extend .hover-color;
+    display: inline;
+    margin-right: 20px;
+  }
+}
+
+.form {
+  .form-control {
+    margin-top: 10px;
+    margin-left: -20px;
+    width: 100%;
+    border-radius: $radius;
+    border-top: 2px solid transparent;
+    transition: $transition;
+    height: 20px;
+    &:focus {
+      outline: none;
+      border-top: 2px solid $green;
+    }
+    &:first-child{
+      margin-top: 32px;
+    }
+  }
+  #message {
+    height: 100px;
+  }
+}
+
+// SECTION - Footer
 
 #footer {
   padding-top: 40px;
@@ -139,13 +284,8 @@ a {
   }
 }
 
-
 // OTHER
-#holder {
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+.holder {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
