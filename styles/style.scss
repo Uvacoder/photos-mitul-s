@@ -12,7 +12,7 @@ $transition: 0.5s all;
 // NAVIGATION
 #navbar {
   @extend .text-center;
-  z-index: 2;
+  z-index: 3;
   position: relative;
   top: 0;
   width: 100%;
@@ -43,6 +43,49 @@ $transition: 0.5s all;
   padding-left: 10px;
   font-size: 16px;
   color: $white;
+}
+
+// SIDEBAR FOR MOBILE
+.open-slide {
+  position: fixed;
+  color: $green;
+  margin: 25px;
+  transition: $transition;
+  &:hover {
+    color: $white;
+  }
+  a:hover {
+    cursor: pointer;
+  }
+}
+
+.side-nav{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: $dark;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: $transition;
+  a {
+    display: block;
+    transition: $transition;
+    &:hover {
+      color:$white;
+    }
+  }
+  .btn-close {
+    position: absolute;
+    color: $second-green;
+    top: 0;
+    right: 22px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 }
 
 // END NAVIGATION //
@@ -288,6 +331,10 @@ $transition: 0.5s all;
 
     #navbar {
       display: none;
+    }
+
+    .open-slide {
+      display: inline !important;
     }
 
     #contact {

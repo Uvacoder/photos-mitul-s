@@ -14,6 +14,12 @@ body, html {
   line-height: 1.42857143;
 }
 
+#main {
+  transition: margin-left 0.5s;
+  overflow: hidden;
+  width: 100%;
+}
+
 h1, h2, h3 {
   font-weight: 400;
   margin-top: 20px;
@@ -118,7 +124,7 @@ a {
 }
 
 .home .down-btn {
-  z-index: 1;
+  z-index: 2;
   border: 2px solid #fff;
 }
 
@@ -156,7 +162,7 @@ a {
 }
 
 #navbar {
-  z-index: 2;
+  z-index: 3;
   position: relative;
   top: 0;
   width: 100%;
@@ -188,6 +194,53 @@ a {
   padding-left: 10px;
   font-size: 16px;
   color: #fff;
+}
+
+.open-slide {
+  position: fixed;
+  color: #16A085;
+  margin: 25px;
+  transition: 0.5s all;
+}
+
+.open-slide:hover {
+  color: #fff;
+}
+
+.open-slide a:hover {
+  cursor: pointer;
+}
+
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #141414;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s all;
+}
+
+.side-nav a {
+  display: block;
+  transition: 0.5s all;
+}
+
+.side-nav a:hover {
+  color: #fff;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  color: #1abc9c;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 #home, #about-header, #service-header {
@@ -400,6 +453,9 @@ a {
   }
   #navbar {
     display: none;
+  }
+  .open-slide {
+    display: inline !important;
   }
   #contact .title {
     text-align: center;
