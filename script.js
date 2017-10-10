@@ -16,14 +16,30 @@ function fixedNav(){
     // Make the nav stick to the top
     document.body.style.paddingTop = nav.offsetHeight + "px";
     document.body.classList.add("fixed-nav");
+    document.querySelector('.open-slide').style.display = "none";
   } else {
     // Remove sticky nav
     document.body.style.paddingTop = 0;
     document.body.classList.remove("fixed-nav");
+    document.querySelector('.open-slide').style.display = "inline";
   }
 }
 // Listen how far user scrolls
 window.addEventListener("scroll", fixedNav);
+
+
+
+// SIDEMENU
+
+function openSlideMenu(){
+  document.getElementById('side-menu').style.width = '250px';
+  document.getElementById('main').style.marginLeft = '250px';
+}
+
+function closeSlideMenu(){
+  document.getElementById('side-menu').style.width = '0';
+  document.getElementById('main').style.marginLeft = '0';
+}
 
 
 
