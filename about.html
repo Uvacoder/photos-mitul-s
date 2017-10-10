@@ -10,6 +10,30 @@
   </head>
   <body>
 
+  <span class="open-slide">
+    <a onclick="openSlideMenu()">
+      <span class="fa fa-bars fa-2x"></span>
+    </a>
+  </span>
+
+  <div id="side-menu" class="side-nav">
+    <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="index.html" class="btn nav-btn">HOME</a>
+    <a href="about.html" class="btn nav-btn">ABOUT</a>
+    <a href="services.html" class="btn nav-btn">SERVICES</a>
+    <a href="#contact" class="btn nav-btn">CONTACT</a>
+    <a href="https://instagram.com/typicalmitul" target="_blank" class="nav-icons">
+      <span class="fa fa-instagram"></span>
+    </a>
+    <a href="https://twitter.com/typicalmitul" target="_blank" class="nav-icons">
+      <span class="fa fa-twitter"></span>
+    </a>
+    <a href="mailto:mitulxshah@gmail.com" target="_blank" class="nav-icons">
+      <span class="fa fa-envelope"></span>
+    </a>
+  </div>
+
+  <div id="main">
     <section id="about-header">
       <div class="container text-center">
         <h1 class="title">WHO AM I</h1>
@@ -149,7 +173,7 @@
         </div>
       </div>
     </section>
-
+  </div>
     <script src="script.js"></script>
     <script src="zenscroll/zenscroll-min.js"></script>
 
