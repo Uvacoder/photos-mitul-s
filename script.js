@@ -68,7 +68,7 @@ Array.prototype.forEach.call(document.querySelectorAll('.photo-item'), function(
 });
 
 // Remove grid on small screens
-const gridDiv  = document.querySelectorAll("#grid");
+/* const gridDiv  = document.querySelectorAll("#grid");
 const gridSm   = document.querySelectorAll("#grid-sm");
 
 window.addEventListener("resize", function() {
@@ -87,4 +87,4 @@ window.addEventListener("resize", function() {
       gridSm[i].classList.remove("grid-small");
      }
    }
-});
+}); */
