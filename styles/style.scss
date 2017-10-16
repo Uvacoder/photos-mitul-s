@@ -322,7 +322,15 @@ $transition: 0.5s all;
 
 @media only screen and (max-width: 650px) {
     .container {
-        width: 95%;
+      width: 95%;
+    }
+
+    .grid {
+      display: block !important;
+    }
+
+    .grid-small {
+      display: block !important;
     }
 
     .holder {

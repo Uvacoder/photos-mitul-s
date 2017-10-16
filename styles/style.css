@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Nunito:300");
-
 * {
   box-sizing: border-box;
 }
@@ -448,6 +447,12 @@ a {
 @media only screen and (max-width: 650px) {
   .container {
     width: 95%;
+  }
+  .grid, #about .grid-small {
+    display: block !important;
+  }
+  .grid-small {
+    display: block !important;
   }
   .holder, #home, #about-header, #service-header, #contact {
     background-attachment: scroll;
