@@ -32,11 +32,13 @@ window.addEventListener("scroll", fixedNav);
 // SIDEMENU
 
 function openSlideMenu(){
+  // Open the side menu by moving the main content
   document.getElementById('side-menu').style.width = '250px';
   document.getElementById('main').style.marginLeft = '250px';
 }
 
 function closeSlideMenu(){
+  // Close the side menu by moving the main content
   document.getElementById('side-menu').style.width = '0';
   document.getElementById('main').style.marginLeft = '0';
 }
