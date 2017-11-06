@@ -58,7 +58,6 @@ for(let i = 0; i < image.length; i++){
 }
 
 
-
 // Lightbox Gallery //
 Array.prototype.forEach.call(document.querySelectorAll('.photo-item'), function(element) {
 	element.onclick = function(e) {
@@ -68,25 +67,3 @@ Array.prototype.forEach.call(document.querySelectorAll('.photo-item'), function(
 		basicLightbox.create(html).show();
 	};
 });
-
-// Remove grid on small screens
-/* const gridDiv  = document.querySelectorAll("#grid");
-const gridSm   = document.querySelectorAll("#grid-sm");
-
-window.addEventListener("resize", function() {
-   for(let i = 0; i < gridDiv.length; i++) {
-     if(window.innerWidth > 768) {
-      gridDiv[i].classList.add("grid");
-     } else {
-      gridDiv[i].classList.remove("grid");
-     }
-   }
-
-	for(let i = 0; i < gridSm.length; i++) {
-     if(window.innerWidth > 768) {
-      gridSm[i].classList.add("grid-small");
-     } else {
-      gridSm[i].classList.remove("grid-small");
-     }
-   }
-}); */
