@@ -68,7 +68,7 @@
 
     <section id="about">
       <div class="container">
-        <div class="grid" id="grid">
+        <div class="grid">
           <div class="about-text">
             <h3 class="title">ABOUT</h3>
             <hr />
@@ -86,7 +86,7 @@
               we can grab a coffee if you'd like
               <span class="fa fa-coffee"></span>
             </p>
-            <div class="grid-small" id="grid-sm">
+            <div class="grid-small">
               <div class="work-history">
                 <h5>Work History</h5>
                 <p class="italic">
@@ -116,7 +116,7 @@
         <h3 class="text-center">CONTACT</h3>
         <hr />
         <div class="space"></div>
-        <div class="grid" id="grid">
+        <div class="grid">
           <div>
             <h1 class="title">LIKE WHAT YOU SEE?</h1>
             <h5>LET'S WORK!</h5>
@@ -150,8 +150,8 @@
           </div>
           <div>
               <form class="form" name="contact" netlify>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
-                <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
                 <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                 <textarea class="form-control message" id="message" rows="4" name="message" placeholder="Message"></textarea>
                 <input id="submit" name="submit" type="submit" value="Send" class="btn send-btn">
@@ -163,7 +163,7 @@
 
     <section id="footer">
       <div class="container">
-        <div class="grid" id="grid">
+        <div class="grid">
           <p>
             <span id="date"></span> © By <a href="#" class="hover-color">Mitul Shah</a>
           </p>
@@ -187,18 +187,6 @@
 
     ga('create', 'UA-84335594-1', 'auto');
     ga('send', 'pageview');
-  </script>
-
-  <!-- Hotjar Tracking Code for http://typicalmitul.com -->
-  <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:108505,hjsv:5};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
 
   </body>
