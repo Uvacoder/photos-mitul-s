@@ -32,11 +32,13 @@ window.addEventListener("scroll", fixedNav);
 // SIDEMENU
 
 function openSlideMenu(){
+  // Open the side menu by moving the main content
   document.getElementById('side-menu').style.width = '250px';
   document.getElementById('main').style.marginLeft = '250px';
 }
 
 function closeSlideMenu(){
+  // Close the side menu by moving the main content
   document.getElementById('side-menu').style.width = '0';
   document.getElementById('main').style.marginLeft = '0';
 }
@@ -56,7 +58,6 @@ for(let i = 0; i < image.length; i++){
 }
 
 
-
 // Lightbox Gallery //
 Array.prototype.forEach.call(document.querySelectorAll('.photo-item'), function(element) {
 	element.onclick = function(e) {
@@ -66,25 +67,3 @@ Array.prototype.forEach.call(document.querySelectorAll('.photo-item'), function(
 		basicLightbox.create(html).show();
 	};
 });
-
-// Remove grid on small screens
-/* const gridDiv  = document.querySelectorAll("#grid");
-const gridSm   = document.querySelectorAll("#grid-sm");
-
-window.addEventListener("resize", function() {
-   for(let i = 0; i < gridDiv.length; i++) {
-     if(window.innerWidth > 768) {
-      gridDiv[i].classList.add("grid");
-     } else {
-      gridDiv[i].classList.remove("grid");
-     }
-   }
-
-	for(let i = 0; i < gridSm.length; i++) {
-     if(window.innerWidth > 768) {
-      gridSm[i].classList.add("grid-small");
-     } else {
-      gridSm[i].classList.remove("grid-small");
-     }
-   }
-}); */

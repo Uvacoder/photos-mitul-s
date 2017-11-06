@@ -19,9 +19,9 @@
 
     <div id="side-menu" class="side-nav">
       <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
-      <a href="https://typicalmitul.com" class="btn nav-btn">HOME</a>
-      <a href="about" class="btn nav-btn">ABOUT</a>
-      <a href="services" class="btn nav-btn">SERVICES</a>
+      <a href="index.html" class="btn nav-btn">HOME</a>
+      <a href="about.html" class="btn nav-btn">ABOUT</a>
+      <a href="services.html" class="btn nav-btn">SERVICES</a>
       <a href="#contact" class="btn nav-btn">CONTACT</a>
       <a href="https://instagram.com/typicalmitul" target="_blank" class="nav-icons">
         <span class="fa fa-instagram"></span>
@@ -51,9 +51,9 @@
       <section id="navbar">
         <div class="container fluid">
           <div class="navigation">
-            <a href="https://typicalmitul.com" class="btn nav-btn">HOME</a>
-            <a href="about" class="btn nav-btn">ABOUT</a>
-            <a href="services" class="btn nav-btn">SERVICES</a>
+            <a href="index.html" class="btn nav-btn">HOME</a>
+            <a href="about.html" class="btn nav-btn">ABOUT</a>
+            <a href="services.html" class="btn nav-btn">SERVICES</a>
             <a href="#contact" class="btn nav-btn">CONTACT</a>
             <a href="https://instagram.com/typicalmitul" target="_blank" class="nav-icons hover-color">
               <span class="fa fa-instagram"></span>
@@ -76,7 +76,7 @@
             Interested in working with me? Check out my services! <br /> Whatever your needs are, I'm determined to meet them. Click the button below to learn more 👋.
           </p>
           <!-- <div class="space"></div> -->
-          <a href="services" class="btn go-to-btn">VISIT SERVICES</a>
+          <a href="services.html" class="btn go-to-btn">VISIT SERVICES</a>
           <div class="space"></div>
           <a href="#photos" class="down-btn">
             <span class="fa fa-angle-down"></span>
@@ -86,7 +86,7 @@
 
       <section id="photos">
         <div class="photo-container">
-          <div class="grid" id="grid">
+          <div class="grid">
             <img src="img/index-grid/portfolio_11.jpg" class="photo-item" data-src="img/index-grid/portfolio_11.jpg" alt="Cadillac in Los Angeles"/>
             <img src="img/index-grid/portfolio_20.jpg" class="photo-item" data-src="img/index-grid/portfolio_20.jpg" alt="View of Trump Tower in Chicago above train tracks"/>
             <img src="img/index-grid/portfolio_03.jpg" class="photo-item" data-src="img/index-grid/portfolio_03.jpg" alt="Spiral staircase in Chicago"/>
@@ -108,7 +108,7 @@
           <h3 class="text-center">CONTACT</h3>
           <hr />
           <div class="space"></div>
-          <div class="grid" id="grid">
+          <div class="grid">
             <div>
               <h1 class="title">LIKE WHAT YOU SEE?</h1>
               <h5>LET'S WORK!</h5>
@@ -142,8 +142,8 @@
             </div>
             <div>
                 <form class="form" name="contact" netlify>
-                  <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
-                  <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
                   <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                   <textarea class="form-control message" id="message" rows="4" name="message" placeholder="Message"></textarea>
                   <input id="submit" name="submit" type="submit" value="Send" class="btn send-btn">
@@ -155,7 +155,7 @@
 
       <section id="footer">
         <div class="container">
-          <div class="grid" id="grid">
+          <div class="grid">
             <p>
               <span id="date"></span> © By <a href="https://twitter.com/typicalmitul" target="_blank" class="hover-color">Mitul Shah</a>
             </p>
@@ -180,18 +180,6 @@
 
       ga('create', 'UA-84335594-1', 'auto');
       ga('send', 'pageview');
-    </script>
-
-    <!-- Hotjar Tracking Code for http://typicalmitul.com -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:108505,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
 
   </body>
