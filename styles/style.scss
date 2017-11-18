@@ -374,6 +374,57 @@ $transition: all 0.2s ease;
 }
 
 
+// SLIDER
+#slider, #slider-wrap, .slide-content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+#slider-wrap {position: relative;}
+
+.arrow {
+  cursor:pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 10px 20px 10px 0;
+  border-color: transparent $white transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+#arrow-right {
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent $white;
+  right: 0;
+  margin-right: 30px;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.slide1{background-image:url("../img/header.jpg")}
+.slide2{background-image:url("../img/service-header.jpg")}
+.slide3{background-image:url("../img/header-other.jpg")}
+
+
+
 // OTHER
 .holder {
   -webkit-background-size: cover;
