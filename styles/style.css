@@ -414,50 +414,53 @@ a {
     width: 90%; } }
 
 @media only screen and (max-width: 650px) {
-  /* line 325, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 326, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  #home, #about-header, #service-header {
+    height: 92vh !important; }
+  /* line 330, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   .container {
     width: 95%; }
-  /* line 329, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 334, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   .grid, #about .grid-small {
     display: block !important;
     margin-left: 0px !important; }
-  /* line 334, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 339, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   .grid-small {
     display: block !important;
     margin-left: 0px !important; }
-  /* line 339, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 344, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   .holder, #home, #about-header, #service-header, #contact {
     background-attachment: scroll; }
-  /* line 343, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 348, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   #navbar {
     display: none; }
-  /* line 347, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 352, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   .open-slide {
     display: inline !important; }
-  /* line 352, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 357, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   #contact .title {
     text-align: center;
     font-size: 28px; }
-  /* line 356, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 361, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   #contact .socials, #contact h5 {
     text-align: center; }
-  /* line 361, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 366, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   .about-photo {
     margin-top: 20px !important;
     min-width: 100%; }
-  /* line 367, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 372, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   .form .form-control {
     margin-left: 0px; }
-  /* line 372, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+  /* line 377, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
   #footer p {
     text-align: center !important; } }
 
-/* line 378, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+/* line 383, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
 .spacing {
   height: 60px;
   margin-top: -60px; }
 
-/* line 383, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+/* line 388, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
 .holder, #home, #about-header, #service-header, #contact {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -466,7 +469,7 @@ a {
   background-position: center;
   background-repeat: no-repeat; }
 
-/* line 393, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
+/* line 398, /Users/mitulshah/Desktop/Wesbites/Websites/photo_v2/styles/style.scss */
 input[type="submit"] {
   -webkit-appearance: none; }
 
