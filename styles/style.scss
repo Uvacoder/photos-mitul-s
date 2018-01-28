@@ -132,9 +132,8 @@ $transition: all 0.2s ease;
   }
   .grid {
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap:10px;
-    margin-left: -20px;
   }
   .photo-item {
     width: 100%;
@@ -201,15 +200,14 @@ $transition: all 0.2s ease;
   padding: 70px 0px;
   .grid {
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
   }
 }
 
 .box {
   margin-top: 20px;
   margin-bottom: 0px;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
 .service {
@@ -241,14 +239,13 @@ $transition: all 0.2s ease;
   padding: 70px 0px;
   .grid {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(4, 1fr);
   }
   .grid-small {
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 15.5px;
     margin-top: 10px;
-    margin-left: -20px;
   }
 }
 
@@ -262,7 +259,7 @@ $transition: all 0.2s ease;
   padding-bottom: 100px;
   .grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -279,7 +276,6 @@ $transition: all 0.2s ease;
 .form {
   .form-control {
     margin-top: 10px;
-    // margin-left: -20px;
     width: 100%;
     border-radius: $radius;
     border-top: 2px solid transparent;
@@ -306,7 +302,7 @@ $transition: all 0.2s ease;
   border-bottom: 5px solid $green;
   .grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
   }
   p:last-child {
     text-align: right;
@@ -333,12 +329,10 @@ $transition: all 0.2s ease;
 
     .grid {
       display: block !important;
-      margin-left: 0px !important;
     }
 
     .grid-small {
       display: block !important;
-      margin-left: 0px !important;
     }
 
     .holder {
