@@ -242,6 +242,35 @@ a {
   margin-left: 50px;
 }
 
+.animate-in {
+  -webkit-animation: fadeIn .7s ease-in;
+  animation: fadeIn .7s ease-in;
+}
+
+.animate-out {
+  -webkit-transition: opacity .7s;
+  transition: opacity .7s;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #home, #about-header, #service-header {
   background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.6)), url(../img/header.jpg);
   height: 100vh;

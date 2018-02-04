@@ -6,12 +6,17 @@ let date = new Date();
 document.getElementById("date").innerHTML = date.getFullYear();
 
 
+// Fade In effect
+window.addEventListener("beforeunload", function () {
+  document.body.classList.add("animate-out");
+});
+
 // Sticky Navbar //
 const nav = document.getElementById("navbar");
 const navTop = nav.offsetTop;
 
 function fixedNav(){
-  // If they scroll past the nac
+  // If they scroll past the nav
   if(window.scrollY >= navTop){
     // Make the nav stick to the top
     document.body.style.paddingTop = nav.offsetHeight + "px";
