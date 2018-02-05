@@ -243,13 +243,13 @@ a {
 }
 
 .animate-in {
-  -webkit-animation: fadeIn .7s ease-in;
-  animation: fadeIn .7s ease-in;
+  -webkit-animation: fadeIn .5s ease-in;
+  animation: fadeIn .5s ease-in;
 }
 
 .animate-out {
-  -webkit-transition: opacity .7s;
-  transition: opacity .7s;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
   opacity: 0;
 }
 
@@ -526,5 +526,15 @@ a {
 
 input[type="submit"] {
   -webkit-appearance: none;
+}
+
+::selection {
+  background: #1abc9c;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #1abc9c;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
