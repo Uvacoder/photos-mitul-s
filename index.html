@@ -142,7 +142,12 @@
               </ul>
             </div>
             <div>
-              <form class="form" name="contact" netlify>
+              <form class="form" name="contact" netlify-honeypot="bot-field" netlify>
+                <p class="hidden">
+                  <label>Don’t fill this out if you're human:
+                    <input name="bot-field" />
+                  </label>
+                </p>
                 <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
                 <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">

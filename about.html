@@ -74,7 +74,7 @@
             <h3 class="title">ABOUT</h3>
             <hr />
             <p>
-              Student at Ryerson University in Toronto, Canada studying the fundamentals of business and technology as well as an aspiring photographer. Currently, I'm working as a Product Lead at CIBC's Digital Discovery Lab, which you can learn more about
+              Student at Ryerson University in Toronto, Canada studying the fundamentals of business and technology as well as an aspiring photographer. Currently, I'm working as an Operations Intern at Uber Eats, which you can learn more about
               <a href="http://mitul.ca" target="_blank" class="blue">here.</a>
             </p>
             <p>
@@ -150,7 +150,12 @@
             </ul>
           </div>
           <div>
-              <form class="form" name="contact" netlify>
+              <form class="form" name="contact" netlify-honeypot="bot-field" netlify>
+                <p class="hidden">
+                  <label>Don’t fill this out if you're human:
+                    <input name="bot-field" />
+                  </label>
+                </p>
                 <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
                 <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
