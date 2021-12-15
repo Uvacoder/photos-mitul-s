@@ -13,4 +13,6 @@ To learn more about NodeJS and essentially how to write server-side code, I'll b
 
 ### Contact
 
+- photo-v2.surge.sh
+
 Check out the website by clicking [here](https://typicalmitul.com) and let me know what you think about it on Twitter! [@typicalmitul](https://twitter.com/typicalmitul) 🏄‍♂️
